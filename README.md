@@ -14,3 +14,8 @@ catkin_make
 source devel/setup.bash
 roslaunch object_detection_ros object_detection.launch image_topic:=<input image topic>
 ```
+## Output
+
+## Reference
+1. [yolov5-onnxruntime ](https://github.com/itsnine/yolov5-onnxruntime)
+2. [Setting up ONNX Runtime on Ubuntu 20.04 (C++ API)](https://stackoverflow.com/questions/63420533/setting-up-onnx-runtime-on-ubuntu-20-04-c-api)
