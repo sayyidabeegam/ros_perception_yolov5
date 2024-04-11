@@ -1,5 +1,5 @@
 # ros_perception_yolov5 
-This repository contains a rospackage that perform real time object detection on camera images using YOLOV5. The node subscribe the input image topic and detect the object and publish the detection output an another ROS topic.
+The ROS node, named object_detection_node, is designed to perform real-time object detection on images received from a specified ROS image topic. The implementation uses a YOLOV5 model for detecting objects within the images. Detected objects are annotated with bounding boxes and class names before being republished on another ROS image topic (/perception_output).
 
 ## Requirments
 1. ROS Noetic
