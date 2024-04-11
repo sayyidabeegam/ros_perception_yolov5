@@ -1,5 +1,12 @@
 # ros_perception_yolov5 
 The ROS node, named object_detection_node, is designed to perform real-time object detection on images received from a specified ROS image topic. The implementation uses a YOLOV5 model for detecting objects within the images. Detected objects are annotated with bounding boxes and class names before being republished on another ROS image topic (/perception_output).
+## Key Components
+- Initialization: Reads parameters, initializes ROS node, and sets up image subscriber and publisher.
+- Load YOLO Model & Detector: Loads the YOLO model file and initializes the object detector.
+- Load Class Names: Loads the class names from a text file.
+- Image Subscriber (imageCallback): Listens to incoming images from a specified ROS topic.
+- Object Detection (YOLO Detector): Performs object detection on received images.
+- Annotate & Publish Image: Draws bounding boxes and class names on the detected objects and publishes the annotated images to a new ROS topic.
 
 ## Requirments
 1. ROS Noetic
