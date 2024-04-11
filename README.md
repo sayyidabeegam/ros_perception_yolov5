@@ -7,6 +7,11 @@ This repository contains a rospackage that perform real time object detection on
 3. ONNX
 
 ## Usage
+### Docker
+```
+docker pull sayyidabeegam/ros-perception:v1
+```
+### Build in native
 ```
 git clone <This repo to your ws/src>
 cd ..
