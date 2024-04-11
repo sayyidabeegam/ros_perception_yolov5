@@ -8,17 +8,50 @@ This repository contains a rospackage that perform real time object detection on
 
 ## Usage
 ### Docker
+1. Pull the docker image
 ```
 docker pull sayyidabeegam/ros-perception:v1
 ```
-### Build in native
+2. Run docker container and run roscore on the same terminal
+```
+docker run -it --name <name of container> sayyidabeegam/ros-perception:v1
+source /opt/ros/noetic/setup.bash
+roscore
+```
+3. Check container ID
+```
+docker ps
+```
+4. Run rosbag on another terminal
+```
+docker exec -it <container ID> bash
+source /opt/ros/noetic/setup.bash
+rosbag play <your bag name>
+```
+5. Launch the ros package in another terminal
+```
+docker exec -it <container ID> bash
+cd catkin_ws
+source devel/setup.bash
+roslaunch object_detection_ros object_detection.launch image_topic:=<input image topic>
+```
+### Native
+Clone repo and build it
 ```
 git clone <This repo to your ws/src>
 cd ..
 catkin_make
+```
+Test the package
+Terminal 1: roscore
+Terminal 2: Play your bag file to test
+Terminal 3:
+```
+cd <your ws>
 source devel/setup.bash
 roslaunch object_detection_ros object_detection.launch image_topic:=<input image topic>
 ```
+
 ## Output
 
 
