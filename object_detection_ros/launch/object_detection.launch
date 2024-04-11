@@ -1,0 +1,7 @@
+<launch>
+    <!-- Start the object detection node with specified image topic -->
+    <arg name="image_topic" default="/mbuggy/camera_right/image_raw"/> <!-- Default image topic -->
+    <param name="model_path" type="string" value="config/yolov5n.onnx"/>
+    <param name="class_names_path" type="string" value="config/classes.txt"/>
+    <node name="object_detection_node" pkg="object_detection_ros" type="object_detection_node" output="screen" args="$(arg image_topic)" />
+</launch>
