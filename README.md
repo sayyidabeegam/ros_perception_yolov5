@@ -60,6 +60,7 @@ roslaunch object_detection_ros object_detection.launch image_topic:=<input image
 ```
 
 ## Output
+![zx](https://github.com/sayyidabeegam/ros_perception_yolov5/assets/47295006/2e10ddfd-1114-43e6-9398-e8ddef4c195f)
 
 
 https://github.com/sayyidabeegam/ros_perception_yolov5/assets/47295006/4a240859-7594-415c-83ba-fb8622020672
